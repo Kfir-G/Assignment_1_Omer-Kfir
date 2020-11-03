@@ -3,8 +3,8 @@ public class DDLinkedList
 	private ListElement head, tail;
 	
 	/**
-	* Add an element to the head of the doubly-linked-list
-	* @param val the integer value to be added to the head of the list
+	* Add an element to the head of the doubly-linked-list.
+	* @param val the integer value to be added to the head of the list.
 	*/
 	protected void addToHead(int val)
 	{
