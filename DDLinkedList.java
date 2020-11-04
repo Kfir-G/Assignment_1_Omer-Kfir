@@ -1,12 +1,12 @@
 public class DDLinkedList
 {
-	/*//here
+
 	private ListElement head, tail;
 	
 	/**
 	* Add an element to the head of the doubly-linked-list
 	* @param val the integer value to be added to the head of the list
-	*/                                          /* //here
+	*/                                          
 	protected void addToHead(int val)
 	{
 		ListElement newElm = new ListElement(val, head);
@@ -23,14 +23,20 @@ public class DDLinkedList
 	/**
 	* Add an element to the tail of the doubly-linked-list
 	* @param val the integer value to be added to the tail of the list
-	*/                                      /*//here
+	*/                                     
 	protected void addToTail(int val)
 	{
-		ListElement newElm = new ListElement(val, tail);
+		ListElement newElm = new ListElement(val);  //OMER! I'm not sure!
 		
+		if(head != null)
+			tail.setPrev(newElm);
+		else
+			//if the list was empty before addition
+			tail = newElm;
 		
+		tail = newElm;
 	} 
-	*/ //here
+	
 }
  class ListElement
 {
