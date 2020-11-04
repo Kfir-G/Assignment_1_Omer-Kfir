@@ -49,12 +49,23 @@ public class DDLinkedList
 	/**
 	* ListElement constructor 
 	* @param val the value of to be held by the ListElement
+	* "next" "prev" references to null
 	*/
 	public ListElement (int val)
 	{
-		this(val, null, null) // invokes constructor with 3 arguments
+		this(val, null, null); // invokes constructor with 3 arguments
 	}
 	
+	/**
+	* ListElement constructor
+	* @param val the value of to be held by the ListElement
+	* @param next the reference to the element next ListElement
+	* "prev" references to null
+	*/
+	public ListElement(int val, ListElement next)
+	{
+		this(val,next,null);
+	}
 	/**
 	* ListElement constructor 
 	* @param val the value of to be held by the ListElement
