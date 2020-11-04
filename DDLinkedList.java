@@ -84,6 +84,7 @@ public class DDLinkedList
 	}
 	
 	//------------methods----------------
+	//Gets:
 	/**
 	* get method for the internal data value
 	* @return an <code> integer </code> the value of the list element
@@ -102,4 +103,40 @@ public class DDLinkedList
 		return next;
 	}
 	
+	/**
+	* get method for the prev ListElement reference
+	* @return an <code> ListElement </code> of the prev
+	*/
+	public ListElement getPrev()
+	{
+		return prev;
+	}
+		//
+	
+	//Sets:
+	/**
+	* set method for the next ListElement reference
+	* @param next ListElement
+	*/
+	public void setNext(ListElement next)
+	{
+		this.next = next;
+	}
+	
+	/**
+	* set method for the prev ListElement reference
+	* @param prev ListElement
+	*/
+	public void setPrev(ListElement prev)
+	{
+		this.prev = prev;
+	}
+		//
+	/**
+	* 
+	*/
+	public String toString()
+	{
+		return ""+val+"";
+	}
 }
