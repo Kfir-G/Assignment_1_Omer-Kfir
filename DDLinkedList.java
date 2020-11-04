@@ -31,6 +31,38 @@ public class DDLinkedList
 	}
 }
 }
-public class ListElement
+ class ListElement
 {
+	private int val;
+	private ListElement next;
+	private ListElement prev;
+	
+	/**
+	* ListElement no-arugment constructor, initializes val data to 0 and 
+	* "next" "prev" references to null
+	*/
+	public ListElement ()
+	{
+		this ( 0, null, null); // invokes constructor with 3 arguments
+	}
+	
+	/**
+	* ListElement constructor 
+	* @param val the value of to be held by the ListElement
+	*/
+	public ListElement (int val)
+	{
+		this(val, null, null) // invokes constructor with 3 arguments
+	}
+	
+	/**
+	* ListElement constructor 
+	* @param val the value of to be held by the ListElement
+	* @param next the reference to the element next ListElement
+	* @param prev the reference to the element prev ListElement
+	*/
+	public ListElement (int val, ListElement next, ListElement prev)
+	{
+		this(val,next,prev); // invokes constructor with 3 arguments
+	}
 }
