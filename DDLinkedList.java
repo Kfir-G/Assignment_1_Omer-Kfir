@@ -1,8 +1,9 @@
 public class DDLinkedList
 {
-
+	//---------data fields----------
 	private ListElement head, tail;
 	
+	//----------methods----------
 	/**
 	* Add an element to the head of the doubly-linked-list
 	* @param val the integer value to be added to the head of the list
@@ -37,6 +38,25 @@ public class DDLinkedList
 		tail = newElm;
 	} 
 	
+	/**
+	* Removes an element from the head of the list 
+	* @return the value of the element removed, or -1 if the list is empty
+	*/
+	protected int removeFromHead()
+	{
+		if(head == null)
+			return -1;
+		
+		int ret = head.getVal();
+		head = head.getNext();
+		
+		if(head == null)
+			tail = head;
+		else
+			head.setPrev(null);
+		
+		return ret;
+	}
 }
  class ListElement
 {
