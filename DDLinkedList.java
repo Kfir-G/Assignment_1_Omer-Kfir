@@ -1,86 +1,123 @@
-public class DDLinkedList
-{
+public class DDLinkedList {
 	//---------data fields----------
 	private ListElement head, tail;
-	
+
 	//----------methods----------
+
 	/**
-	* Add an element to the head of the doubly-linked-list
-	* @param val the integer value to be added to the head of the list
-	*/                                          
-	protected void addToHead(int val)
-	{
+	 * Add an element to the head of the doubly-linked-list
+	 *
+	 * @param val the integer value to be added to the head of the list
+	 */
+	protected void addToHead(int val) {
 		ListElement newElm = new ListElement(val, head);
-		
-		if(head != null)
+
+		if (head != null)
 			head.setPrev(newElm);
 		else
 			//if the list was empty before addition
 			tail = newElm;
-			
+
 		head = newElm;
 	}
-	
+
 	/**
-	* Add an element to the tail of the doubly-linked-list
-	* @param val the integer value to be added to the tail of the list
-	*/                                     
-	protected void addToTail(int val)
-	{
-		ListElement newElm = new ListElement(val);  //OMER! I'm not sure!
-		
-		if(head != null)
+	 * Add an element to the tail of the doubly-linked-list
+	 *
+	 * @param val the integer value to be added to the tail of the list
+	 */
+	protected void addToTail(int val) {
+		ListElement newElm = new ListElement(val);
+
+		if (head != null)
 			tail.setPrev(newElm);
 		else
 			//if the list was empty before addition
 			tail = newElm;
-		
+
 		tail = newElm;
-	} 
-	
+	}
+
 	/**
-	* Removes an element from the head of the list 
-	* @return the value of the element removed, or -1 if the list is empty
-	*/
-	protected int removeFromHead()
-	{
-		if(head == null)
+	 * Removes an element from the head of the list
+	 *
+	 * @return the value of the element removed, or -1 if the list is empty
+	 */
+	protected int removeFromHead() {
+		if (head == null)
 			return -1;
-		
+
 		int ret = head.getVal();
 		head = head.getNext();
-		
-		if(head == null)
+
+		if (head == null)
 			tail = head;
 		else
 			head.setPrev(null);
-		
+
 		return ret;
 	}
-	
+
 	/**
-	* Removes an element from the head of the list
-	* @return the value of the element removed, or -1 if the list is empty
-	*/
-	protected int removeFromTail()
-	{
-		if(head == null)
-		{
+	 * Removes an element from the head of the list
+	 *
+	 * @return the value of the element removed, or -1 if the list is empty
+	 */
+	protected int removeFromTail() {
+		if (head == null) {
 			return -1;//if the list is empty
 		}
 
-		
+
 		int ret = tail.getVal();
 		tail = tail.getNext();
-		
-		if(head == null)
+
+		if (head == null)
 			tail = head;
 		else
 			tail.setPrev(null);
-		
+
 		return ret;
 	}
+	/**
+	 * Add to the list an already allocated element, before a given element
+	 *
+	 * @param  newElm element to be added to the list.
+	 * @param beforeElm existing element in the list to add newElm before it.
+	 */
+	protected void addElm(ListElement newElm, ListElement beforeElm){
+
+		if (head == null && tail == null) {
+
+			head = newElm;
+			tail = newElm;
+			return;
+		}
+
+		if(beforeElm == head){
+			newElm.setNext(head);
+			head.setPrev(newElm);
+			head = newElm;
+			return;
+		}
+	}
+
+	public void display() { //print -> (HEAD)vra r var ..... var (TAIL) -> NULL ?\n
+
+		ListElement tempList = new ListElement()ListElement();
+
+		for (ListElement i :) {
+
+		}
+	}
+
+
+	public boolean isEmpty(){
+	if(head)
+	}
+
 }
+
  class ListElement
 {
 	//---------data fields-----------------
