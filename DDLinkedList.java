@@ -62,10 +62,13 @@ public class DDLinkedList
 	* Removes an element from the head of the list
 	* @return the value of the element removed, or -1 if the list is empty
 	*/
-	protected int removeFromTail
+	protected int removeFromTail;
 	{
-		if(head == null) //if the list is empty
-			return -1;
+		if(head == null)
+		{
+			return -1;//if the list is empty //מוחזר מחוץ למתודה
+		}
+
 		
 		int ret = tail.getVal();
 		tail = tail.getNext();
@@ -75,7 +78,7 @@ public class DDLinkedList
 		else
 			tail.setPrev(null);
 		
-		return ret;
+		return ret; // מוחזר מחוץ למתודה
 	}
 }
  class ListElement
