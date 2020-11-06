@@ -17,7 +17,7 @@ public class Manager
 	public Manager()
 	{
 		st = new Stack();
-		q = new Queue()
+		q = new Queue();
 	}
 	
 	//-----------methods-----------------
