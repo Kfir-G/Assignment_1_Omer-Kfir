@@ -102,18 +102,38 @@ public class DDLinkedList {
 		}
 	}
 
+
+	/**
+	 * Display ALL the elements in the list.
+	 *
+	 * @return returns all the elements by using the toString func.
+	 */
 	public void display() { //print -> (HEAD)vra r var ..... var (TAIL) -> NULL ?\n
 
-		ListElement tempList = new ListElement()ListElement();
+		if(head == null)
+			return;
+		ListElement temp = head;
 
-		for (ListElement i :) {
-
+		while(temp != null){
+			System.out.println((temp.toString()));
+			temp = temp.getNext();
 		}
 	}
 
+	/**
+	 * Indicates whether or not the list is empty.
+	 *
+	 * @return returns true if the list is empty; otherwise, false.
+	 */
 
 	public boolean isEmpty(){
-	if(head)
+		if(head == null){
+			return false;
+		}
+		else{
+			return true;
+		}
+
 	}
 
 }
