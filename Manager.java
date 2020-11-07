@@ -24,14 +24,27 @@ public class Manager
 	/**
 	* Displays and handles the user choices interactively
 	*/
-	private void displayMenu()
-	{
-		
+	private void displayMenu() {
+		Scanner myScanner = new Scanner(System.in);
+
+		while (true) {
+			System.out.println(Arrays.toString(menuOptions));
+
+			switch (myScanner.nextInt()) {
+				case 1:
+					System.out.println("Enter a number to enqueue.");
+					q.enqueue(myScanner.nextInt());
+
+				case 2:
+					q.dequeue();
+
+			}
+		}
 	}
 
 	//--------------Main--------------------
-	public static void main(String[]args)
-	{
-		
+	public static void main(String[] args){
+		Manager mangr = new Manager();
+		mangr.displayMenu();
 	}
 }

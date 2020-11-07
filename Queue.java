@@ -7,7 +7,7 @@ public class Queue extends DDLinkedList
 	*/
 	public void enqueue(int val)
 	{
-		addTotail(val);
+		addToTail(val);
 	}
 	
 	/**
@@ -16,7 +16,7 @@ public class Queue extends DDLinkedList
 	*/
 	public int dequeue()
 	{
-		if(isEmpty() == -1){
+		if(isEmpty() == true){
 			System.out.println("Dequeue: queue is empty");
 			return -1;
 		}
