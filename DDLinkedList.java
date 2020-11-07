@@ -33,7 +33,7 @@ public class DDLinkedList {
 			tail.setPrev(newElm);
 		else
 			//if the list was empty before addition
-			tail = newElm;
+			head = newElm;
 
 		tail = newElm;
 	}

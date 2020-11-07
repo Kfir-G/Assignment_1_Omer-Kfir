@@ -35,10 +35,12 @@ public class Manager
 					System.out.println("Enter a number to enqueue.");
 					q.enqueue(myScanner.nextInt());
 					break;
-
 				case 2:
 					q.dequeue();
-
+					break;
+				case 3:
+					q.display();
+					break;
 			}
 		}
 	}
