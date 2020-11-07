@@ -28,12 +28,13 @@ public class Manager
 		Scanner myScanner = new Scanner(System.in);
 
 		while (true) {
-			System.out.println(Arrays.toString(menuOptions));
+			System.out.print(Arrays.toString(menuOptions));
 
 			switch (myScanner.nextInt()) {
 				case 1:
 					System.out.println("Enter a number to enqueue.");
 					q.enqueue(myScanner.nextInt());
+					break;
 
 				case 2:
 					q.dequeue();
