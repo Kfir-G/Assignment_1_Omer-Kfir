@@ -5,7 +5,7 @@ public class Stack extends DDLinkedList
      * @param val an integer value of the element that push to the Stack
      */
     public void push(int val){addToHead(val);}
-    //chen a gever
+
 
     /**
      * pop an element from the top of the Stack.
