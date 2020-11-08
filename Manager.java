@@ -7,7 +7,7 @@ public class Manager
 	private Queue q;
 	
 	private String [] menuOptions = {"1. Enqueue", "2. Dequeue",
-		"3. Display queue", "4.Push", "5. Pop", "6. Display stack", "7. Exit"};	
+		"3. Display queue", "4. Push", "5. Pop", "6. Display stack", "7. Exit"};
 	
 	//---------constructors------------
 	/**
@@ -37,11 +37,25 @@ public class Manager
 					q.enqueue(myScanner.nextInt());
 					break;
 				case 2:
-					q.dequeue();
+					System.out.println("number dequeued: " + q.dequeue());
 					break;
 				case 3:
+					System.out.printf("Queue: ");
 					q.display();
 					break;
+				case 4:
+					System.out.println("Enter a number to push.");
+					st.push(myScanner.nextInt());
+					break;
+				case 5:
+					System.out.println("pop item : " + st.pop());
+					break;
+				case 6:
+					System.out.printf("Stack: ");
+					st.display();
+					break;
+				case 7:
+					System.exit(0);
 			}
 		}
 	}

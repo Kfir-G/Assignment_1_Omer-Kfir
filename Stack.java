@@ -4,7 +4,9 @@ public class Stack extends DDLinkedList
      * push an element to the top of the Stack.
      * @param val an integer value of the element that push to the Stack
      */
-    public void push(int val){addToHead(val);}
+    public void push(int val){
+        addToHead(val);
+    }
 
 
     /**
@@ -13,11 +15,10 @@ public class Stack extends DDLinkedList
      *
      */
     public int pop(){
-        if(removeFromHead() == -1){
+        if(isEmpty())
             return -1;
-        }
-        else{
+        else
             return removeFromHead();
-        }
+
     }
 }

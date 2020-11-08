@@ -29,10 +29,13 @@ public class DDLinkedList {
 	protected void addToTail(int val) {
 		ListElement newElm = new ListElement(val);
 
-		if (head != null)
-			tail.setPrev(newElm);
+		if (head != null) { //5
+			tail.setNext(newElm);
+			newElm.setPrev(tail);
+		}
 		else
-			//if the list was empty before addition
+
+		//if the list was empty before addition
 			head = newElm;
 
 		tail = newElm;
@@ -108,16 +111,16 @@ public class DDLinkedList {
 	 *
 	 * @return returns all the elements by using the toString func.
 	 */
-	public void display() { //print -> (HEAD)vra r var ..... var (TAIL) -> NULL ?\n
+	public void display() {
 
 		if(head == null)
 			return;
 		ListElement temp = head;
-
 		while(temp != null){
-			System.out.println((temp.toString()));
+			System.out.printf((temp.toString() + " "));
 			temp = temp.getNext();
 		}
+		System.out.println(" ");
 	}
 
 	/**
